@@ -2,9 +2,6 @@
 
 A sleek, responsive web-based calculator built using **HTML5**, **JavaScript**, and **Tailwind CSS**. This project features a modern dark-mode aesthetic with full keyboard support and calculation history.
 
-!
-
-[Image of the calculator interface]
 
 
 ## 🚀 Features
@@ -33,7 +30,7 @@ A sleek, responsive web-based calculator built using **HTML5**, **JavaScript**, 
 
 1. Clone the Repository:
 
-git clone [https://github.com/YOUR_USERNAME/simple-calculator.git](https://github.com/YOUR_USERNAME/simple-calculator.git)
+    git clone [https://github.com/YOUR_USERNAME/simple-calculator.git](https://github.com/YOUR_USERNAME/simple-calculator.git)
 
 2. Open in VS Code: Navigate to the folder and open it.
 
