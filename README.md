@@ -27,8 +27,7 @@ A sleek, responsive web-based calculator built using **HTML5**, **JavaScript**, 
 ├── index.html   # Main structure and Tailwind configuration
 ├── style.css    # Custom transitions and scrollbar styles
 └── script.js    # Calculator logic and keyboard events
-
-
+```
 
 ⚙️ How to Run Locally
 
