@@ -28,6 +28,8 @@ A sleek, responsive web-based calculator built using **HTML5**, **JavaScript**, 
 ├── style.css    # Custom transitions and scrollbar styles
 └── script.js    # Calculator logic and keyboard events
 
+
+
 ⚙️ How to Run Locally
 
 1. Clone the Repository:
