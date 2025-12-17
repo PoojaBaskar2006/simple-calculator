@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'calc-bg': '#1f2937',
+                        'calc-display': '#374151',
+                        'calc-btn-num': '#4b5563',
+                        'calc-btn-op': '#f59e0b',
+                        'calc-btn-eq': '#10b981',
+                        'calc-btn-clear': '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center font-sans p-4">
+
+    <div class="w-full max-w-sm bg-calc-bg p-4 rounded-xl shadow-2xl border border-gray-700">
+        <h1 class="text-2xl font-bold text-white mb-4 text-center">Calculator</h1>
+
+        <div class="bg-calc-display p-4 mb-4 rounded-lg shadow-inner">
+            <div id="history" class="text-gray-300 text-sm text-right whitespace-pre-wrap break-all mb-1"></div>
+            <div id="display" class="text-white text-5xl font-light text-right overflow-hidden h-14">0</div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3">
+            <button onclick="clearDisplay()" class="col-span-2 text-white bg-calc-btn-clear hover:bg-red-600 active:ring-4 active:ring-red-400 font-bold py-4 rounded-xl btn-transition text-xl">AC</button>
+            <button onclick="appendOperator('/')" class="text-white bg-calc-btn-op hover:bg-amber-600 active:ring-4 active:ring-amber-400 font-bold py-4 rounded-xl btn-transition text-xl">/</button>
+            <button onclick="appendOperator('*')" class="text-white bg-calc-btn-op hover:bg-amber-600 active:ring-4 active:ring-amber-400 font-bold py-4 rounded-xl btn-transition text-xl">×</button>
+
+            <button onclick="appendNumber(7)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">7</button>
+            <button onclick="appendNumber(8)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">8</button>
+            <button onclick="appendNumber(9)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">9</button>
+            <button onclick="appendOperator('-')" class="text-white bg-calc-btn-op hover:bg-amber-600 active:ring-4 active:ring-amber-400 font-bold py-4 rounded-xl btn-transition text-xl">-</button>
+
+            <button onclick="appendNumber(4)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">4</button>
+            <button onclick="appendNumber(5)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">5</button>
+            <button onclick="appendNumber(6)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">6</button>
+            <button onclick="appendOperator('+')" class="text-white bg-calc-btn-op hover:bg-amber-600 active:ring-4 active:ring-amber-400 font-bold py-4 rounded-xl btn-transition text-xl">+</button>
+
+            <button onclick="appendNumber(1)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">1</button>
+            <button onclick="appendNumber(2)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">2</button>
+            <button onclick="appendNumber(3)" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">3</button>
+            <button onclick="appendOperator('%')" class="text-white bg-calc-btn-op hover:bg-amber-600 active:ring-4 active:ring-amber-400 font-bold py-4 rounded-xl btn-transition text-xl">%</button>
+
+            <button onclick="appendNumber(0)" class="col-span-2 text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">0</button>
+            <button onclick="appendDecimal()" class="text-white bg-calc-btn-num hover:bg-gray-600 active:ring-4 active:ring-gray-500 py-4 rounded-xl btn-transition text-xl">.</button>
+            <button onclick="calculateResult()" class="text-white bg-calc-btn-eq hover:bg-emerald-600 active:ring-4 active:ring-emerald-400 font-bold py-4 rounded-xl btn-transition text-xl">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

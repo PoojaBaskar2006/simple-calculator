@@ -1,0 +1,28 @@
+/* Animation Transitions */
+
+.btn-transition {
+    transition: all 0.15s ease-in-out;
+}
+
+
+/* History Scrollbar Styling */
+
+#history {
+    max-height: 4rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #0f1113;
+}
+
+#history::-webkit-scrollbar {
+    width: 6px;
+}
+
+#history::-webkit-scrollbar-thumb {
+    background-color: #f01a2b;
+    border-radius: 3px;
+}
+
+#history::-webkit-scrollbar-track {
+    background-color: #374151;
+}
